@@ -1,0 +1,71 @@
+#reminders {
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+h3 {
+    font-size: 2em;
+    font-family: cursive;
+    font-weight: 100;
+    padding-top: 3%;
+}
+
+ul {
+	margin-top: 5%;
+	margin-bottom: 20px;
+    max-height: 50vh;
+	overflow-y: scroll;
+}
+
+ul > div {
+    background-color: RGBA(175, 214, 227, 0.3);
+    border: 1px rgba(175,214,227,0.2) solid;
+    height: 2em;
+    line-height: 2.5em;
+    margin: 0 20% 3px 20%;
+    min-width: 350px;
+}
+
+button {
+    background-color: #f1f1f2;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-weight:100;
+    line-height: 1em;
+    margin:5px 5px 0 0;
+    padding: 3px;
+    position: relative;
+    width: 20px;
+}
+
+li {
+	display: inline-block;
+	margin-right: 10px;
+	text-decoration: none;
+	float: left;
+    font-family: fantasy;
+    font-weight: bolder;
+    margin-left: 10px;
+    height: 2em;
+}
+
+input[type="text"] {
+	border-radius: 5px;
+	line-height: 2em;
+	width: 50%;
+	margin-right: 3%;
+	padding-left: 10px;
+	font-family: fantasy;
+}
+
+input[type="submit"] {
+	line-height: 2em;
+    background-color: #1995ad;
+    cursor: pointer;
+    width: 32px;
+    color: white;
+    border-radius: 10px;
+    vertical-align: bottom;
+}

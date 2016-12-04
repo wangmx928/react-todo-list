@@ -1,0 +1,20 @@
+@import "./list.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    min-width: 425px;
+}
+
+section#todoapp {
+    background-color: #F1F1F2;
+    text-align: center;
+    height: 100vh;
+}
