@@ -30,7 +30,7 @@ class ToDoApp extends React.Component {
       <div id="reminders">
         <ToDoBanner/>
         <ToDoList reminders={this.state.reminders} deleteReminder={this.deleteReminder}/>
-        <ToDoForm onFormSubmit={this.updateReminders}/>
+        <ToDoForm reminders={this.state.reminders} onFormSubmit={this.updateReminders}/>
       </div>
     );
   }

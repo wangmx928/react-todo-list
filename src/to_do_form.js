@@ -1,8 +1,14 @@
 import React from 'react';
+
 export class ToDoForm extends React.Component{
-	constructor(){
-		super();
-		this.state = {reminder: ''};
+	constructor(props){
+		super(props);
+		this.state = {
+			reminder: {
+				text:'',
+				id: 0
+			}
+		};
 		this.onChange = this.onChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
 	};
@@ -10,21 +16,21 @@ export class ToDoForm extends React.Component{
 	handleSubmit(e){
 		e.preventDefault();
 		this.props.onFormSubmit(this.state.reminder);
-		this.setState({reminder:''});
+		this.setState({reminder:{text:'', id: ++this.state.reminder.id}});
 		this.refs.reminder.focus();
 		return;
 	};
 
 	onChange(e){
 		this.setState({
-			reminder: e.target.value
+			reminder: {text: e.target.value, id: this.state.reminder.id}
 		});
 	};
 
 	render(){
 		return(
 			<form onSubmit={this.handleSubmit}>
-				<input placeholder="Type in reminders here" type='text' ref='reminder' onChange={this.onChange} value={this.state.reminder}/>
+				<input placeholder="Type in reminders here" type='text' ref='reminder' onChange={this.onChange} value={this.state.reminder.text}/>
 				<input type='submit' value='+'/>
 			</form>
 		);
