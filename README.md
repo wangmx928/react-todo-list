@@ -1,5 +1,6 @@
 To run this app, run
 `npm run start`
+Then checkout `localhost:3000` in browser
 
 Remember to install packages first,
 `npm install`
